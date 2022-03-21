@@ -13,7 +13,7 @@ import (
 )
 
 var (
-	AddressURL = "https://api.ideal-postcodes.co.uk/v1/."
+	AddressURL = "https://api.ideal-postcodes.co.uk/v1/"
 )
 
 type Address struct {
