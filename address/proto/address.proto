@@ -15,7 +15,7 @@ message Record {
 	string line_two = 2;
 	// the complete address
 	string summary = 3;
-	// organisation if present.
+	// organisation if present
 	string organisation = 4;
 	// building name
 	string building_name = 5;
