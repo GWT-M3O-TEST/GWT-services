@@ -4,7 +4,7 @@
       "title": "Lookup postcode",
       "run_check": false,
       "request": {
-        "postcode": "SW1A 2AA"
+        "postcode": "SW1A 2AB"
       },
       "response": {
         "addresses": [
