@@ -1,7 +1,11 @@
 name: Downstream
 
 # Alert downstream repos
-on: [push]
+on:
+  push:
+    paths:
+      - '**.proto'
+      - 'examples.json'
 
 jobs:
   build:
@@ -9,6 +13,6 @@ jobs:
     steps:
       - name: Trigger M3O
         run: |
-          curl -X POST -H "Authorization: token $GH_PAT" -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/GWT-M3O-TEST/GWT-m3o/dispatches -d '{"event_type":"build_dart"}'
+          curl -X POST -H "Authorization: token $GH_PAT" -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/GWT-M3O-TEST/GWT-m3o/dispatches -d '{"event_type":"build_m3o_client"}'
         env:
           GH_PAT: ${{ secrets.API_TOKEN_GITHUB }}
